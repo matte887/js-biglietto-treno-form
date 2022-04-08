@@ -1,7 +1,3 @@
-// Chiedere al passeggero età e km necessari
-
-console.log(travelDistance, typeof(travelDistance), passengerAge, typeof(passengerAge));
-
 // Calcola prezzo biglietto standard
 let ticketPrice;
 ticketPrice = travelDistance * kmPrice;
