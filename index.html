@@ -4,10 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Train ticket dot com</title>
 </head>
 <body>
-    <h1 id="ticket-price"></h1>
+    <h2>Calcola il prezzo del tuo biglietto</h2>
+    <div class="container">
+        <div class="data-wrapper">
+            <div class="form-item">
+                <label for="username">Nome e cognome</label>
+                <input type="text" name="username" id="username">
+            </div>
+            <div class="form-item">
+                <label for="user-km">Chilometri viaggio</label>
+                <input type="text" name="user-km" id="user-km">
+            </div>
+            <div class="form-item">
+                <label for="age">Fascia d'età</label>
+                <select name="age" id="age">
+                    <option value=""></option>
+                    <option value="junior">Junior</option>
+                    <option value="adult">Adult</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+
+            <button id="confirm">Invia</button>
+            <button id="clear">Annulla</button>
+        </div>
+
+        <div class="your-ticket d-none">
+            <h2>Il tuo biglietto</h2>
+            <table>
+                <tr>
+                    <th>Nome passeggero</th>
+                    <th>Offerta</th>
+                    <th>Carrozza</th>
+                    <th>Codice CP</th>
+                    <th>Costo biglietto</th>
+                </tr>
+                <tr>
+                    <td>Jon Snow</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="ticket-price"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    
     <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>

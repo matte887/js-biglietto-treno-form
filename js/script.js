@@ -28,4 +28,4 @@ if (isNaN(travelDistance) || isNaN(passengerAge)) {
 console.log(ticketPrice);
 
 // output
-document.getElementById('ticket-price').innerHTML = `Il prezzo del biglietto è € ${ticketPrice.toFixed(2)}`;
+document.getElementById('ticket-price').innerHTML = `${ticketPrice.toFixed(2)}€`;
