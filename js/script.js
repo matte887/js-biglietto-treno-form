@@ -63,7 +63,7 @@ console.log(clearBtn);
 clearBtn.addEventListener("click",
     function() {
         // Nascondere biglietto
-        const ticket = document.querySelector(".your-ticket");
+        const ticket = document.querySelectorAll(".your-ticket");
         ticket.classList.add("d-none");
 
         // Ripulire i campi
@@ -72,7 +72,7 @@ clearBtn.addEventListener("click",
 
         const travelDistance = document.getElementById("user-km");
         travelDistance.value = "";
-        
+
         const passengerAge = document.getElementById("age");
         passengerAge.value = "";
     }

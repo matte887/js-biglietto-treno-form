@@ -1,3 +1,117 @@
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+    font-family: sans-serif;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+}
+
+.mt-1 {
+    margin-top: 1rem;
+}
+
+body {
+    background-color: #b91450;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+}
+
+/* FORM */
+.form-wrapper {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem 3rem;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.form-item {
+    text-align: center;
+}
+
+label {
+    display: block;
+    text-align: center;
+}
+
+input,
+select {
+    text-align: center;
+    border: 1px solid #b91450;
+    border-radius: 5px;
+    padding: .2rem .4rem;
+}
+
+input:focus-visible,
+select:focus-visible {
+    outline: 3px solid #b91450;
+}
+
+button {
+    padding: .2rem .4rem;
+    font-weight: bold;
+}
+
+label,
+button {
+    color: #b91450;
+}
+
+/* TICKET */
 .d-none {
-    display: none;
+    /* display: none; */
+}
+
+.your-ticket {
+    background-color: white;
+    padding: 1rem 3rem;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    text-align: left;
+    padding: 1rem;
+}
+
+#no-pad td {
+    padding: 0 1rem;
+}
+
+th:first-of-type,
+tr td:first-of-type {
+    background-color: grey;
+}
+
+#passenger {
+    font-weight: bold;
 }
