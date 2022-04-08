@@ -56,3 +56,24 @@ confirmBtn.addEventListener("click",
         document.getElementById("code").innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1) ) + 90000;
     }
 );
+
+const clearBtn = document.getElementById("clear");
+console.log(clearBtn);
+
+clearBtn.addEventListener("click",
+    function() {
+        // Nascondere biglietto
+        const ticket = document.querySelector(".your-ticket");
+        ticket.classList.add("d-none");
+
+        // Ripulire i campi
+        const userName = document.getElementById("username");
+        userName.value = "";
+
+        const travelDistance = document.getElementById("user-km");
+        travelDistance.value = "";
+        
+        const passengerAge = document.getElementById("age");
+        passengerAge.value = "";
+    }
+)
