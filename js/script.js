@@ -6,7 +6,7 @@ const confirmBtn = document.getElementById("confirm");
 console.log(confirmBtn);
 confirmBtn.addEventListener("click",
     function() {
-        // Prelevo dati utente
+        // Prelievo dati utente
         const userName = document.getElementById("username").value;
         console.log(userName);
         const travelDistance = document.getElementById("user-km").value;
@@ -14,7 +14,7 @@ confirmBtn.addEventListener("click",
         const passengerAge = document.getElementById("age").value;
         console.log(passengerAge);
 
-        // Mostro i dati utente
+        // Riportare dati nel biglietto
         const nameResponse = document.getElementById("passenger");
         console.log(nameResponse);
         nameResponse.innerHTML = `${userName}`;
@@ -26,16 +26,16 @@ confirmBtn.addEventListener("click",
         const ticket = document.querySelector(".your-ticket");
         ticket.classList.remove("d-none");
 
-        // Calcola prezzo biglietto standard
+        // Calcolare prezzo biglietto standard
         let ticketPrice;
         ticketPrice = travelDistance * kmPrice;
         console.log(ticketPrice);
 
-        // Determina se i dati inseriti sono corretti
+        // Determinare se i dati inseriti sono corretti
         if (isNaN(travelDistance)) {
             alert("I dati inseriti non sono corretti");
         } else {
-            // Determina se il passeggero ha diritto ad uno sconto e applicalo
+            // Determinare se il passeggero ha diritto ad uno sconto e applicalo
             if (passengerAge === "Tariffa Junior") {
                 const juniorTicketPrice = ticketPrice - ((ticketPrice * 20)/100);
                 console.log(juniorTicketPrice);
@@ -46,8 +46,13 @@ confirmBtn.addEventListener("click",
                 ticketPrice = seniorTicketPrice;
             }
         }
-
         // output
         document.getElementById('ticket-price').innerHTML = `€${ticketPrice.toFixed(2)}`;
+
+        // Generare numero carrozza (random da 1 a 12)
+        document.getElementById("train-car").innerHTML = Math.floor(Math.random() * (12 - 1 + 1) ) + 1;
+
+        // Generare numero carrozza (random da 90000 a 99999)
+        document.getElementById("code").innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1) ) + 90000;
     }
 );
