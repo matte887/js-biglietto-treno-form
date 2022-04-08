@@ -1,31 +1,25 @@
-// Chiedere al passeggero età e km necessari
+// Variabili di base
 const kmPrice = 0.21;
-const travelDistance = parseInt(prompt("Quanti chilometri devi percorrere?"));
-const passengerAge = parseInt(prompt("Quanti anni hai?"));
-console.log(travelDistance, typeof(travelDistance), passengerAge, typeof(passengerAge));
 
-// Calcola prezzo biglietto standard
-let ticketPrice;
-ticketPrice = travelDistance * kmPrice;
-console.log(ticketPrice);
+// Selezione tasto "Invia"
+const confirmBtn = document.getElementById("confirm");
+console.log(confirmBtn);
+confirmBtn.addEventListener("click",
+    function() {
+        // Prelevo dati utente
+        const userName = document.getElementById("username").value;
+        console.log(userName);
+        const travelDistance = document.getElementById("user-km").value;
+        console.log(travelDistance);
+        const passengerAge = document.getElementById("age").value;
+        console.log(passengerAge);
 
-// Determina se i dati inseriti sono corretti
-if (isNaN(travelDistance) || isNaN(passengerAge)) {
-    alert("I dati inseriti non sono corretti");
-} else {
-    // Determina se il passeggero ha diritto ad uno sconto e applicalo
-    if (passengerAge < 18) {
-        const juniorTicketPrice = ticketPrice - ((ticketPrice * 20)/100);
-        console.log(juniorTicketPrice);
-        ticketPrice = juniorTicketPrice;
-    } else if (passengerAge >= 65) {
-        const seniorTicketPrice = ticketPrice - ((ticketPrice * 40)/100);
-        console.log(seniorTicketPrice);
-        ticketPrice = seniorTicketPrice;
+        // Mostro i dati utente
+        const nameResponse = document.getElementById("passenger");
+        console.log(nameResponse);
+        nameResponse.innerHTML = `${userName}`;
+
+        const tariffResponse = document.getElementById("ticket-type");
+        tariffResponse.innerHTML = `${passengerAge}`;
     }
-}
-
-console.log(ticketPrice);
-
-// output
-document.getElementById('ticket-price').innerHTML = `${ticketPrice.toFixed(2)}€`;
+);
